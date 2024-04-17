@@ -1,0 +1,34 @@
+.WorkPage-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.WorkPage-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0;
+  font-size: 3em;
+  font-weight: 550;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.WorkPage-go-button {
+  border: solid 4px #1b1e24;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  font-size: 2em;
+}
+
+.WorkPage-go-button:hover {
+  background-color: #1b1e24;
+}
+
+.WorkPage-go-button:disabled {
+  color: grey;
+  background-color: #1b1e24;
+}

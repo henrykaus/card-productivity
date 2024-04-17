@@ -1,0 +1,13 @@
+.Site-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Main {
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}

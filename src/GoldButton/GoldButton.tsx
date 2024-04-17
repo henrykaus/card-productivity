@@ -5,11 +5,12 @@ import {faCoins} from "@fortawesome/free-solid-svg-icons";
 
 interface GoldButtonProps {
   children: number;
+  onClick: () => void;
 }
 
-const GoldButton = ({children}: GoldButtonProps): ReactElement => {
+const GoldButton = ({children, onClick}: GoldButtonProps): ReactElement => {
   return (
-    <button className="GoldButton">
+    <button className="GoldButton" onClick={onClick}>
       <FontAwesomeIcon icon={faCoins} />
       {children}
     </button>
