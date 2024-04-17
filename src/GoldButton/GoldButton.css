@@ -4,9 +4,10 @@
     position: absolute;
     bottom: 1em;
     left: 1em;
-    background-color: white;
-    color: #1b1e24;
+    background-color: #F0C868;
+    color: #795e1a;
     border-radius: 500px;
+    border: solid 4px #795e1a;
     font-size: 2em;
     padding: 0.5em 0.75em;
     font-weight: 800;
