@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/card-productivity/static/css/main.44688593.css",
+    "main.css": "/card-productivity/static/css/main.ff06c550.css",
     "main.js": "/card-productivity/static/js/main.85428afb.js",
     "static/js/453.ed3810f9.chunk.js": "/card-productivity/static/js/453.ed3810f9.chunk.js",
     "index.html": "/card-productivity/index.html",
-    "main.44688593.css.map": "/card-productivity/static/css/main.44688593.css.map",
+    "main.ff06c550.css.map": "/card-productivity/static/css/main.ff06c550.css.map",
     "main.85428afb.js.map": "/card-productivity/static/js/main.85428afb.js.map",
     "453.ed3810f9.chunk.js.map": "/card-productivity/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44688593.css",
+    "static/css/main.ff06c550.css",
     "static/js/main.85428afb.js"
   ]
 }
