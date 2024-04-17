@@ -2,13 +2,13 @@ import React, {ReactElement, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './WorkPage.css';
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
-import TimeInput, {emptyTime, Time} from "../TimeInput/TimeInput";
+import TimeInput, {emptyTime, Time} from "./TimeInput/TimeInput";
 
-interface WorkPageProps {
+export interface PageProps {
   updateGoldValue: (gold: number) => void;
 }
 
-const WorkPage = (props: WorkPageProps): ReactElement => {
+const WorkPage = (props: PageProps): ReactElement => {
   const {updateGoldValue} = props;
 
   const [time, setTime] = useState<Time>(emptyTime);

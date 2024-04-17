@@ -1,0 +1,45 @@
+.CardPack {
+  height: 300px;
+  width: 200px;
+  background-color: white;
+  border-radius: 15px;
+  border: solid 2px grey;
+  transition: all ease-in-out 0.2s;
+  position: relative;
+  background-image: url("../../../public/card1.png");
+  background-size: cover;
+  box-shadow: 1px 5px 10px 5px #1b1e24;
+
+
+  animation-name: card-pack-hover-from;
+  animation-duration: 1s;
+}
+
+.CardPack:hover {
+  animation-name: card-pack-hover;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes card-pack-hover {
+  0%   {transform: scale(1) rotate(0);}
+  25%  {transform: scale(1.2) rotate(1deg); box-shadow: 1px 5px 15px 10px #1b1e24;}
+  100% {transform: scale(1.1) rotate(-3deg); box-shadow: 1px 5px 12px 7px #1b1e24;}
+}
+
+@keyframes card-pack-hover-from {
+  from {transform: scale(1.1) rotate(-3deg); box-shadow: 1px 5px 12px 7px #1b1e24;}
+  to {transform: scale(1) rotate(0); box-shadow: 1px 5px 10px 5px #1b1e24;}
+}
+
+.CardPack-cost {
+  display: flex;
+  gap: 0.2em;
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  color: #f0c868;
+  font-size: 1.3em;
+  font-weight: 800;
+  margin: 0;
+}
