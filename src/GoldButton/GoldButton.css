@@ -1,0 +1,13 @@
+.GoldButton {
+    display: flex;
+    gap: 0.5em;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    background-color: white;
+    color: #1b1e24;
+    border-radius: 500px;
+    font-size: 2em;
+    padding: 0.5em 0.75em;
+    font-weight: 800;
+}

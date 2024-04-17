@@ -1,23 +1,25 @@
-import React, {ReactElement, useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, {ReactElement, useEffect, useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './App.css';
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import {createContext} from "react";
+import GoldButton from "./GoldButton/GoldButton";
+import TimeInput, {emptyTime, Time} from "./TimeInput/TimeInput";
 
-interface Time {
-  hours: string | undefined;
-  minutes: string | undefined;
-}
-
-const emptyTime: Time = {
-  hours: undefined,
-  minutes: undefined,
-}
+const GoldContext = createContext(0);
 
 const App = (): ReactElement => {
   const [time, setTime] = useState<Time>(emptyTime);
+  const [goldCount, setGoldCount] = useState(0);
 
   const validateAndSetTime = (type: "hours" | "minutes", timeString: string) => {
-    const timeNumber = Number(timeString);
+    const filteredTimeString = timeString
+      .replaceAll('-', '')
+      .replaceAll('.', '')
+      .replaceAll('+', '')
+      .slice(0, 2);
+    const timeNumber = Number(filteredTimeString);
+
     if (isNaN(timeNumber)) {
       return;
     }
@@ -26,7 +28,7 @@ const App = (): ReactElement => {
         if (!(timeNumber < 0) && !(timeNumber > 99)) {
           setTime({
             ...time,
-            hours: timeString.slice(0, 2),
+            hours: filteredTimeString,
           })
         }
         break;
@@ -35,7 +37,7 @@ const App = (): ReactElement => {
         if (!(timeNumber < 0) && !(timeNumber > 59)) {
           setTime({
             ...time,
-            minutes: timeString.slice(0, 2),
+            minutes: filteredTimeString,
           })
         }
         break;
@@ -43,40 +45,38 @@ const App = (): ReactElement => {
     }
   }
 
+  const changeGoldCount = () => {
+    const hours = Number(time.hours);
+    const minutes = Number(time.minutes);
+    let goldToAdd = 0;
+    if (!isNaN(hours)) {
+      goldToAdd += hours * 60;
+    }
+    if (!isNaN(minutes)) {
+      goldToAdd += minutes;
+    }
+    setGoldCount(goldCount + goldToAdd);
+  }
+
   return (
-    <main className="App">
-      <p className="App-header">
-        I worked
-        <input
-          value={time.hours}
-          placeholder="HH"
-          type="text"
-          name="hours"
-          className="App-time-input"
-          onChange={(event) =>
-            validateAndSetTime("hours", event.target.value)
-          }
-        />
-        :
-        <input
-          value={time.minutes}
-          placeholder="MM"
-          type="text"
-          name="minute"
-          className="App-time-input"
-          onChange={(event) =>
-            validateAndSetTime("minutes", event.target.value)
-          }
-        />
-      </p>
-      <button
-        className="App-go-button"
-        disabled={Number(time.minutes) <= 0 && Number(time.hours) <= 0}
-        onClick={() => console.log(time)}
-      >
-        <FontAwesomeIcon icon={faArrowRight}/>
-      </button>
-    </main>
+    <GoldContext.Provider value={goldCount}>
+      <main className="App">
+        <p className="App-header">
+          I worked
+          <TimeInput time={time} onChange={validateAndSetTime} />
+        </p>
+        <button
+          className="App-go-button"
+          disabled={!(Number(time.hours) > 0) && !(Number(time.minutes) > 0)}
+          onClick={changeGoldCount}
+        >
+          <FontAwesomeIcon icon={faArrowRight}/>
+        </button>
+        <GoldButton>
+          {goldCount}
+        </GoldButton>
+      </main>
+    </GoldContext.Provider>
   );
 }
 

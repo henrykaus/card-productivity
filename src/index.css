@@ -23,3 +23,8 @@ button {
 button:disabled {
   cursor: not-allowed;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
