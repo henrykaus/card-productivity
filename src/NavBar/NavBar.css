@@ -1,7 +1,7 @@
 .NavBar {
   background-color: #1b1e24;
   border-radius: 16px 0 0 16px;
-  margin: 1em 0;
+  margin: auto 0;
 }
 
 .NavBar-list {
@@ -12,13 +12,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-
 }
 
 .NavBar-list button {
   font-size: 1.5em;
   height: 2em;
   width: 2em;
+  text-align: center;
   border-radius: 9px;
   transition: background-color 100ms ease-in;
 }

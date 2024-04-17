@@ -8,7 +8,14 @@
     color: #795e1a;
     border-radius: 500px;
     border: solid 4px #795e1a;
-    font-size: 2em;
-    padding: 0.5em 0.75em;
+    font-size: 1.75em;
+    padding: 0.5em 0.65em;
     font-weight: 800;
+}
+
+@media (max-width: 615px) {
+    .GoldButton {
+        font-size: 1.25em;
+        border-width: 3px;
+    }
 }

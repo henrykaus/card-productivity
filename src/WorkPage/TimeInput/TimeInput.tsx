@@ -2,13 +2,13 @@ import React, {ReactElement, useEffect, useRef} from 'react';
 import './TimeInput.css';
 
 export interface Time {
-  hours: string | undefined;
-  minutes: string | undefined;
+  hours: string;
+  minutes: string;
 }
 
 export const emptyTime: Time = {
-  hours: undefined,
-  minutes: undefined,
+  hours: '',
+  minutes: '',
 }
 
 interface TimeInputProps {

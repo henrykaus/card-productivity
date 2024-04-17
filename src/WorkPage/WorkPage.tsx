@@ -35,7 +35,13 @@ const WorkPage = (props: PageProps): ReactElement => {
         break;
       }
       case "minutes": {
-        if (!(timeNumber < 0) && !(timeNumber > 59)) {
+        if (timeNumber > 59) {
+          setTime({
+            ...time,
+            minutes: '59',
+          })
+        }
+        else if (timeNumber >= 0) {
           setTime({
             ...time,
             minutes: filteredTimeString,
@@ -48,8 +54,10 @@ const WorkPage = (props: PageProps): ReactElement => {
 
   const changeGoldCount = (event: any) => {
     event.preventDefault();
+
     const hours = Number(time.hours);
     const minutes = Number(time.minutes);
+
     let goldToAdd = 0;
     if (!isNaN(hours)) {
       goldToAdd += hours * 60;
@@ -58,10 +66,13 @@ const WorkPage = (props: PageProps): ReactElement => {
       goldToAdd += minutes;
     }
     updateGoldValue(goldToAdd);
+    setTime(emptyTime);
   }
 
   return (
-    <form className="WorkPage-form" onSubmit={(event) => changeGoldCount(event)}>
+    <form className="WorkPage-form" onSubmit={(event) =>
+      changeGoldCount(event)
+    }>
       <p className="WorkPage-header">
         I worked
         <TimeInput time={time} onChange={validateAndSetTime} />
