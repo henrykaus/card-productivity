@@ -21,7 +21,8 @@
 .WorkPage-go-button {
   border: solid 4px #1b1e24;
   border-radius: 15px;
-  padding: 0.5em 1em;
+  height: 65px;
+  width: 70px;
   font-size: 2em;
 }
 

@@ -16,12 +16,9 @@ const CardPack = (props: CardPackProps): ReactElement => {
 
   return (
     <button
-      className="CardPack"
-      onClick={() => {
-        if (price <= gold) {
-          onPurchase(price)
-        }
-      }}
+      className='CardPack'
+      onClick={() => onPurchase(price)}
+      disabled={price > gold}
     >
       <p className="CardPack-cost">
         <FontAwesomeIcon icon={faCoins} />

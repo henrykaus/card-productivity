@@ -9,13 +9,18 @@
   background-image: url("../../../public/card1.png");
   background-size: cover;
   box-shadow: 1px 5px 10px 5px #1b1e24;
+}
 
+.CardPack:disabled {
+  filter: brightness(0.5);
+}
 
+.CardPack:enabled {
   animation-name: card-pack-hover-from;
   animation-duration: 1s;
 }
 
-.CardPack:hover {
+.CardPack:hover:enabled {
   animation-name: card-pack-hover;
   animation-duration: 1.2s;
   animation-fill-mode: forwards;

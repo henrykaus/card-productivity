@@ -1,0 +1,19 @@
+.Shard {
+  transition: all ease-in-out 0.2s;
+}
+
+.Shard:hover {
+  transform: scale(1.07);
+}
+
+.Shard-image {
+  border-radius: 15px;
+  border: solid 2px grey;
+  object-fit: cover;
+  box-shadow: 1px 5px 10px 5px #1b1e24;
+}
+
+.Shard-text {
+  font-weight: 700;
+  font-size: 1.2em;
+}
