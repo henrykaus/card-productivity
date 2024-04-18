@@ -14,9 +14,9 @@ const RewardsModal = (props: RewardsModalProps): ReactElement => {
   return isOpen ? (
     <main className="RewardsModal">
       <ul className="RewardsModal-list">
-        <Shard itemName='AirPods' image='airpods-1.png' />
-        <Shard itemName='AirPods' image='airpods-1.png' />
-        <Shard itemName='AirPods' image='airpods-1.png' />
+        <Shard itemName='AirPods' image='airpods.png' />
+        <Shard itemName='AirPods' image='airpods.png' />
+        <Shard itemName='AirPods' image='airpods.png' />
       </ul>
       <button className="RewardsModal-claim" onClick={onClose}>Claim Rewards</button>
     </main>
