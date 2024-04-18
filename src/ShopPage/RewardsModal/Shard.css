@@ -6,9 +6,13 @@
   transform: scale(1.07);
 }
 
+.Shard-image-container {
+  position: relative;
+}
+
 .Shard-image {
   border-radius: 15px;
-  border: solid 2px grey;
+  border: solid 5px #27282D;
   object-fit: cover;
   box-shadow: 1px 5px 10px 5px #1b1e24;
 }
@@ -16,4 +20,42 @@
 .Shard-text {
   font-weight: 700;
   font-size: 1.2em;
+}
+
+.Shard-icon-container {
+  position: absolute;
+  background-color: #27282D;
+  border-radius: 0 15px 0 10px;
+  top: 0;
+  right: 0;
+  padding: 0.5em 0.7em;
+  color: #9377AB;
+}
+
+.Shard-icon-container:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border-top-right-radius: 10px;
+  box-shadow: 5px -5px 0 0 #27282D;
+}
+
+.Shard-icon-container:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border-top-right-radius: 10px;
+  box-shadow: 5px -5px 0 0 #27282D;
+}
+
+.Shard-icon {
+  filter: drop-shadow(0 0 3px #6B577D);
 }

@@ -1,6 +1,7 @@
 import React, {ReactElement} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Shard.css';
+import {faBolt} from "@fortawesome/free-solid-svg-icons";
 
 interface ShardProps {
   itemName: string;
@@ -12,7 +13,12 @@ const Shard = (props: ShardProps): ReactElement => {
 
   return (
     <section className='Shard'>
-      <img src={require(`../../img/${image}`)} alt={itemName} height={300} width={200} className='Shard-image' />
+      <div className='Shard-image-container'>
+        <img src={require(`../../img/${image}`)} alt={itemName} height={300} width={200} className='Shard-image' />
+        <span className='Shard-icon-container'>
+          <FontAwesomeIcon icon={faBolt} className='Shard-icon'/>
+        </span>
+      </div>
       <p className='Shard-text'>{itemName} Shard</p>
     </section>
   );
