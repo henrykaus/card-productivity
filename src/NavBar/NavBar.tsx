@@ -23,6 +23,7 @@ const NavBar = ({activePage, setPage}: NavBarProps): ReactElement => {
           <button
             onClick={() => setPage(Page.Work)}
             className={`${activePage === Page.Work && 'NavBar-active'}`}
+            aria-label='Work Page'
           >
             <FontAwesomeIcon icon={faClock} />
           </button>
@@ -31,6 +32,7 @@ const NavBar = ({activePage, setPage}: NavBarProps): ReactElement => {
           <button
             onClick={() => setPage(Page.Shop)}
             className={`${activePage === Page.Shop && 'NavBar-active'}`}
+            aria-label='Shop Page'
           >
             <FontAwesomeIcon icon={faStore} />
           </button>
@@ -39,6 +41,7 @@ const NavBar = ({activePage, setPage}: NavBarProps): ReactElement => {
           <button
             onClick={() => setPage(Page.Inventory)}
             className={`${activePage === Page.Inventory && 'NavBar-active'}`}
+            aria-label='Inventory Page'
           >
             <FontAwesomeIcon icon={faBriefcase} />
           </button>

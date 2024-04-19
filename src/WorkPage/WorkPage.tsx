@@ -81,6 +81,7 @@ const WorkPage = (props: PageProps): ReactElement => {
         className="WorkPage-go-button"
         disabled={!(Number(time.hours) > 0) && !(Number(time.minutes) > 0)}
         type="submit"
+        aria-label='Add time'
       >
         <FontAwesomeIcon icon={faArrowRight}/>
       </button>

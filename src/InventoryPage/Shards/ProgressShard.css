@@ -1,0 +1,13 @@
+.ProgressShard-info {
+  margin: 0;
+  line-height: 1em;
+}
+
+.ProgressShard-count {
+  font-size: 1.1em;
+  font-weight: 800;
+}
+
+.ProgressShard-number {
+  font-size: 0.8em;
+}

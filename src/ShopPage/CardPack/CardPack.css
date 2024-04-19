@@ -6,7 +6,7 @@
   border: solid 2px grey;
   transition: all ease-in-out 0.2s;
   position: relative;
-  background-image: url("../../../public/card1.png");
+  background-image: url("../../img/card1.png");
   background-size: cover;
   box-shadow: 1px 5px 10px 5px #1b1e24;
 }

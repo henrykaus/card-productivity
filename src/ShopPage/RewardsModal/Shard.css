@@ -10,6 +10,10 @@
   position: relative;
 }
 
+.Shard-image-container:disabled {
+  cursor: unset;
+}
+
 .Shard-image {
   border-radius: 15px;
   border: solid 5px #27282D;
@@ -22,17 +26,20 @@
   font-size: 1.2em;
 }
 
-.Shard-icon-container {
+.Shard-info {
   position: absolute;
   background-color: #27282D;
   border-radius: 0 15px 0 10px;
   top: 0;
   right: 0;
   padding: 0.5em 0.7em;
-  color: #9377AB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 
-.Shard-icon-container:before {
+.Shard-info:before {
   content: "";
   position: absolute;
   left: -20px;
@@ -44,7 +51,7 @@
   box-shadow: 5px -5px 0 0 #27282D;
 }
 
-.Shard-icon-container:after {
+.Shard-info:after {
   content: "";
   position: absolute;
   bottom: -20px;
@@ -56,6 +63,18 @@
   box-shadow: 5px -5px 0 0 #27282D;
 }
 
-.Shard-icon {
+/* Color Classes */
+.Shard--purple .Shard-info {
+  color: #9377AB;
+}
+.Shard--purple .Shard-icon {
   filter: drop-shadow(0 0 3px #6B577D);
 }
+
+.Shard--green .Shard-info {
+  color: #79ab77;
+}
+.Shard--green .Shard-icon {
+  filter: drop-shadow(0 0 3px #577d58);
+}
+

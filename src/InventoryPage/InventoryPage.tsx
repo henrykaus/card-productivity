@@ -1,48 +1,43 @@
 import React, {ReactElement, useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './InventoryPage.css';
-import {Item, items} from "../items";
-import Shard from "../ShopPage/RewardsModal/Shard";
-
-interface InventoryItem extends Item {
-  count: number;
-}
+import ProgressShard from "./Shards/ProgressShard";
+import {getInventory, InventoryItem, removeItemFromInventory} from "./inventoryPageUtils";
+import CompleteShard from "./Shards/CompleteShard";
 
 const InventoryPage = (): ReactElement => {
   const [inventory, setInventory] = useState<InventoryItem[]>([])
 
   useEffect(() => {
-    const storageInventory = localStorage.getItem("inventory");
-
-    if (storageInventory) {
-      const inventoryValues = JSON.parse(storageInventory);
-      const itemNames = Object.keys(inventoryValues);
-      let inventory: InventoryItem[] = [];
-      itemNames.forEach((itemName) => {
-        const item = items.find((item) => item.name === itemName);
-        if (item) {
-          inventory.push({
-            ...item,
-            count: inventoryValues[itemName],
-          })
-        }
-      });
-
-      setInventory(inventory);
-    }
+    const inventory = getInventory();
+    setInventory(inventory);
   }, []);
 
   return (
     <article className="InventoryPage">
       <div className="InventoryPage-slider">
-        {inventory.map((inventoryItem) => (
-          <Shard
-            itemName={inventoryItem.name}
-            image={inventoryItem.image}
-            numShards={inventoryItem.numShards}
-            count={inventoryItem.count}
-          />
-        ))}
+        {inventory.map((inventoryItem, index) =>
+          inventoryItem.numComplete ? (
+            <CompleteShard
+              key={index}
+              onRemove={() => {
+                const updatedInventory = removeItemFromInventory(inventoryItem);
+                setInventory(updatedInventory);
+              }}
+              numComplete={inventoryItem.numComplete}
+              itemName={inventoryItem.name}
+              image={inventoryItem.image}
+            />
+          ) : (
+            <ProgressShard
+              key={index}
+              itemName={inventoryItem.name}
+              image={inventoryItem.image}
+              numShards={inventoryItem.numShards}
+              count={inventoryItem.count}
+            />
+          )
+        )}
       </div>
     </article>
   );
