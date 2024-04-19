@@ -15,4 +15,4 @@
 2. Clone the repo to your machine
 3. Run `npm i` in `card-productivity/`
 4. Run `npm start` in `card-productivity/`
-5. If the localhost:3000 site it opens up automatically doesn't work, try using the "On your network" address that was printed in the console.
+5. If the `http://localhost:3000/card-productivity` site it opens up automatically doesn't work, try using the "On Your Network" address that was printed in the console.
