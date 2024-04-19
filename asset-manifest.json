@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/card-productivity/static/css/main.b2961a02.css",
-    "main.js": "/card-productivity/static/js/main.78ed5d65.js",
+    "main.css": "/card-productivity/static/css/main.1cf28ffc.css",
+    "main.js": "/card-productivity/static/js/main.0fd16c3e.js",
     "static/js/453.ed3810f9.chunk.js": "/card-productivity/static/js/453.ed3810f9.chunk.js",
-    "static/media/pillow.png": "/card-productivity/static/media/pillow.f76e5eaed3ecb7f98805.png",
-    "static/media/airpods.png": "/card-productivity/static/media/airpods.821866fbe65b850e919f.png",
-    "static/media/shirt.png": "/card-productivity/static/media/shirt.ed13d6415609e082f6be.png",
-    "static/media/computer.png": "/card-productivity/static/media/computer.d507db55bb87dacf70b4.png",
-    "static/media/card1.png": "/card-productivity/static/media/card1.7a0f5bc0d3b02ea678d2.png",
+    "static/media/airpods.png": "/card-productivity/static/media/airpods.695582fd61b2c6094bd3.png",
+    "static/media/pillow.png": "/card-productivity/static/media/pillow.d134664645f05d03854c.png",
+    "static/media/shirt.png": "/card-productivity/static/media/shirt.26ddc1e7d174331c74b6.png",
+    "static/media/computer.png": "/card-productivity/static/media/computer.3252a971f73fef9f7b73.png",
+    "static/media/card1.png": "/card-productivity/static/media/card1.a977e3ee7bedbe01786c.png",
     "index.html": "/card-productivity/index.html",
-    "main.b2961a02.css.map": "/card-productivity/static/css/main.b2961a02.css.map",
-    "main.78ed5d65.js.map": "/card-productivity/static/js/main.78ed5d65.js.map",
+    "main.1cf28ffc.css.map": "/card-productivity/static/css/main.1cf28ffc.css.map",
+    "main.0fd16c3e.js.map": "/card-productivity/static/js/main.0fd16c3e.js.map",
     "453.ed3810f9.chunk.js.map": "/card-productivity/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2961a02.css",
-    "static/js/main.78ed5d65.js"
+    "static/css/main.1cf28ffc.css",
+    "static/js/main.0fd16c3e.js"
   ]
 }
