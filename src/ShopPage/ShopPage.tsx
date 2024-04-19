@@ -37,7 +37,7 @@ const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
 
   return (
     <article className="ShopPage">
-      <CardPack price={50} onPurchase={handlePurchase} />
+      <CardPack price={60} onPurchase={handlePurchase} />
       <RewardsModal
         rewards={rewards}
         isOpen={rewardsModalIsOpen}
