@@ -6,10 +6,12 @@ import {faBolt} from "@fortawesome/free-solid-svg-icons";
 interface ShardProps {
   itemName: string;
   image: string;
+  numShards?: number;
+  count?: number;
 }
 
 const Shard = (props: ShardProps): ReactElement => {
-  const {itemName, image} = props;
+  const {itemName, image, numShards, count} = props;
 
   return (
     <section className='Shard'>
@@ -18,6 +20,9 @@ const Shard = (props: ShardProps): ReactElement => {
         <span className='Shard-icon-container'>
           <FontAwesomeIcon icon={faBolt} className='Shard-icon'/>
         </span>
+        {numShards && count && (
+          <p>{count}/{numShards}</p>
+        )}
       </div>
       <p className='Shard-text'>{itemName} Shard</p>
     </section>

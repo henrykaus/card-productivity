@@ -5,6 +5,7 @@ import GoldButton from "../GoldButton/GoldButton";
 import WorkPage from "../WorkPage/WorkPage";
 import NavBar, {Page} from "../NavBar/NavBar";
 import ShopPage from "../ShopPage/ShopPage";
+import InventoryPage from "../InventoryPage/InventoryPage";
 
 export const GoldContext = createContext(0);
 
@@ -36,6 +37,9 @@ const Main = (): ReactElement => {
             <ShopPage
               updateGoldValue={updateGoldValue}
             />
+          )}
+          {page === Page.Inventory && (
+            <InventoryPage />
           )}
         </main>
         <NavBar activePage={page} setPage={setPage}/>

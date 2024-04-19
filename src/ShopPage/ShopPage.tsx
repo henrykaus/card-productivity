@@ -1,10 +1,10 @@
 import React, {ReactElement, useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './ShopPage.css';
 import CardPack from "./CardPack/CardPack";
 import {PageProps} from "../WorkPage/WorkPage";
 import RewardsModal from "./RewardsModal/RewardsModal";
 import {items, Item} from "../items";
+import {updateInventory} from "./shopPageUtils";
 
 const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
   const [rewardsModalIsOpen, setRewardsModalIsOpen] = useState(false);
@@ -29,7 +29,9 @@ const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
 
   const handlePurchase = (price: number) => {
     updateGoldValue(-price);
-    setRewards(pickRewards(3));
+    const rewards = pickRewards(3);
+    updateInventory(rewards);
+    setRewards(rewards);
     setRewardsModalIsOpen(true);
   }
 
