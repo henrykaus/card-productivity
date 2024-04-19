@@ -2,6 +2,9 @@
   background-color: #1b1e24;
   border-radius: 16px 0 0 16px;
   margin: auto 0;
+  position: absolute;
+  right: 0;
+  top: 40vh;
 }
 
 .NavBar-list {

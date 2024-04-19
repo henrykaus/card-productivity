@@ -27,7 +27,6 @@ const InventoryPage = (): ReactElement => {
           })
         }
       });
-      console.log(inventory);
 
       setInventory(inventory);
     }
@@ -35,14 +34,16 @@ const InventoryPage = (): ReactElement => {
 
   return (
     <article className="InventoryPage">
-      {inventory.map((inventoryItem) => (
-        <Shard
-          itemName={inventoryItem.name}
-          image={inventoryItem.image}
-          numShards={inventoryItem.numShards}
-          count={inventoryItem.count}
-        />
-      ))}
+      <div className="InventoryPage-slider">
+        {inventory.map((inventoryItem) => (
+          <Shard
+            itemName={inventoryItem.name}
+            image={inventoryItem.image}
+            numShards={inventoryItem.numShards}
+            count={inventoryItem.count}
+          />
+        ))}
+      </div>
     </article>
   );
 }

@@ -1,6 +1,13 @@
 .InventoryPage {
   display: flex;
-  gap: 1em;
+  max-width: 100vw;
+}
+
+.InventoryPage-slider {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 2em;
+  overflow-x: auto;
+  padding: 0 3em;
+  height: 100vh;
 }
