@@ -8,6 +8,8 @@
 
 .Shard-image-container {
   position: relative;
+  padding: 0;
+  font-size: 1em;
 }
 
 .Shard-image-container:disabled {
@@ -61,6 +63,10 @@
   background: transparent;
   border-top-right-radius: 10px;
   box-shadow: 5px -5px 0 0 #27282D;
+}
+
+.Shard-icon {
+  z-index: 1;
 }
 
 /* Color Classes */
