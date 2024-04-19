@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/card-productivity/static/css/main.c188168f.css",
-    "main.js": "/card-productivity/static/js/main.80db505d.js",
+    "main.js": "/card-productivity/static/js/main.06f16dc0.js",
     "static/js/453.ed3810f9.chunk.js": "/card-productivity/static/js/453.ed3810f9.chunk.js",
     "static/media/airpods.png": "/card-productivity/static/media/airpods.695582fd61b2c6094bd3.png",
     "static/media/pillow.png": "/card-productivity/static/media/pillow.d134664645f05d03854c.png",
@@ -10,11 +10,11 @@
     "static/media/card1.png": "/card-productivity/static/media/card1.a977e3ee7bedbe01786c.png",
     "index.html": "/card-productivity/index.html",
     "main.c188168f.css.map": "/card-productivity/static/css/main.c188168f.css.map",
-    "main.80db505d.js.map": "/card-productivity/static/js/main.80db505d.js.map",
+    "main.06f16dc0.js.map": "/card-productivity/static/js/main.06f16dc0.js.map",
     "453.ed3810f9.chunk.js.map": "/card-productivity/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c188168f.css",
-    "static/js/main.80db505d.js"
+    "static/js/main.06f16dc0.js"
   ]
 }
