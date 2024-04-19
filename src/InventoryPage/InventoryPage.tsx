@@ -1,5 +1,4 @@
 import React, {ReactElement, useEffect, useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './InventoryPage.css';
 import ProgressShard from "./Shards/ProgressShard";
 import {getInventory, InventoryItem, removeItemFromInventory} from "./inventoryPageUtils";

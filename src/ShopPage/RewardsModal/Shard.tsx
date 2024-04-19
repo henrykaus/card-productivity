@@ -2,7 +2,6 @@ import React, {ReactElement} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Shard.css';
 import {faBolt, faGift} from "@fortawesome/free-solid-svg-icons";
-import {fab} from "@fortawesome/free-brands-svg-icons";
 
 export interface ShardProps {
   itemName: string;
