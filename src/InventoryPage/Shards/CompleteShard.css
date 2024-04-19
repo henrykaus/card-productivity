@@ -1,6 +1,9 @@
 .CompleteShard-info {
   margin: 0;
   line-height: 1em;
+}
+
+.CompleteShard-number {
   font-size: 1.1em;
   font-weight: 800;
 }

@@ -20,7 +20,8 @@ const CompleteShard = (props: CompleteShardProps): ReactElement => {
       icon='gift'
       info={(
         <p className='CompleteShard-info'>
-          x{numComplete}
+          x
+          <span className='CompleteShard-number'>{numComplete}</span>
         </p>
       )}
     />
