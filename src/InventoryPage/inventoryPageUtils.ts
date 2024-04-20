@@ -1,4 +1,4 @@
-import {Item, items} from "../items";
+import {Item, ITEMS} from "../items";
 
 export interface InventoryItem extends Item {
   count: number;
@@ -13,7 +13,7 @@ export const getInventory = (): InventoryItem[] => {
     const itemNames = Object.keys(inventoryValues);
     let inventory: InventoryItem[] = [];
     itemNames.forEach((itemName) => {
-      const item = items.find((item) => item.name === itemName);
+      const item = ITEMS.find((item) => item.name === itemName);
       if (item) {
         inventory.push(...createInventoryItems(inventoryValues[itemName], item));
       }

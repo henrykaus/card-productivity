@@ -5,7 +5,9 @@ export interface Item {
   image: string;
 }
 
-export const items: Item[] = [
+export const PACK_PRICE = 60;
+
+export const ITEMS: Item[] = [
   {
     name: 'AirPods',
     numShards: 15,
@@ -31,3 +33,4 @@ export const items: Item[] = [
     image: 'computer.png'
   },
 ]
+

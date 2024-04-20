@@ -3,7 +3,7 @@ import './ShopPage.css';
 import CardPack from "./CardPack/CardPack";
 import {PageProps} from "../WorkPage/WorkPage";
 import RewardsModal from "./RewardsModal/RewardsModal";
-import {items, Item} from "../items";
+import {ITEMS, Item, PACK_PRICE} from "../items";
 import {updateInventory} from "./shopPageUtils";
 
 const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
@@ -11,12 +11,12 @@ const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
   const [rewards, setRewards] = useState<Item[]>([]);
 
   const pickRewards = (numRewards: number) => {
-    const range = items.reduce((acc, item) => acc + item.weight, 0);
+    const range = ITEMS.reduce((acc, item) => acc + item.weight, 0);
 
     let rewards: Item[] = [];
     for (let i = 0; i < numRewards; i++) {
       const randomNumber = Math.random() * range;
-      items.reduce((currWeightTotal, item) => {
+      ITEMS.reduce((currWeightTotal, item) => {
         if (randomNumber > currWeightTotal && randomNumber <= currWeightTotal + item.weight) {
           rewards.push(item);
         }
@@ -37,7 +37,7 @@ const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
 
   return (
     <article className="ShopPage">
-      <CardPack price={60} onPurchase={handlePurchase} />
+      <CardPack price={PACK_PRICE} onPurchase={handlePurchase} />
       <RewardsModal
         rewards={rewards}
         isOpen={rewardsModalIsOpen}
