@@ -9,6 +9,8 @@
 5. Run `npm i` in `card-productivity/`
 6. Run `npm run deploy` in `card-productivity/`
 
+From here, in order to redeploy any changes, just run `npm run deploy`.
+
 ## Steps to Locally Run
 
 1. Install Node.js
