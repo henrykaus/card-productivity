@@ -6,7 +6,7 @@
   border: solid 2px grey;
   transition: all ease-in-out 0.2s;
   position: relative;
-  background-image: url("../../img/card1.png");
+  background-image: url("../../img/card2.png");
   background-size: cover;
   box-shadow: 1px 5px 10px 5px #1b1e24;
 }
@@ -38,13 +38,13 @@
 }
 
 .CardPack-cost {
-  display: flex;
-  gap: 0.2em;
-  position: absolute;
-  bottom: 0.5em;
-  right: 0.5em;
-  color: #f0c868;
-  font-size: 1.3em;
-  font-weight: 800;
-  margin: 0;
+	display: flex;
+	gap: 0.2em;
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+	color: #F0C868;
+	font-size: 1.3em;
+	font-weight: 800;
+	margin: 0;
 }

@@ -32,5 +32,18 @@ export const ITEMS: Item[] = [
     weight: 0.1,
     image: 'computer.png'
   },
+  {
+    name: 'Headphones',
+    numShards: 15,
+    weight: 0.1,
+    image: 'headphones.png'
+   },
+   {
+    name: 'Sparkling Water',
+    numShards: 1,
+    weight: .2,
+    image : 'water.png'
+   }
+
 ]
 
