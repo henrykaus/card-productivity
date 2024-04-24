@@ -42,8 +42,7 @@ export const ITEMS: Item[] = [
     name: 'Sparkling Water',
     numShards: 1,
     weight: .2,
-    image : 'water.png'
+    image: 'water.png'
    }
-
 ]
 

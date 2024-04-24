@@ -74,7 +74,7 @@ const WorkPage = (props: PageProps): ReactElement => {
       changeGoldCount(event)
     }>
       <p className="WorkPage-header">
-        I worked
+       I worked
         <TimeInput time={time} onChange={validateAndSetTime} />
       </p>
       <button
