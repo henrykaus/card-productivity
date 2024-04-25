@@ -24,7 +24,7 @@ export const PACKS: Pack[] = [
       'Shirt',
       'Computer',
       'Headphones',
-      'Sparking Water'
+      'Sparkling Water'
     ]
   }
 ]
