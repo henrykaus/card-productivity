@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   gap: 2em;
 }
@@ -25,6 +25,8 @@
 }
 
 .RewardsModal-claim {
+  transition: opacity 0.75s ease;
+  opacity: 1;
   font-size: 1.2em;
   font-weight: 600;
   background-color: #282c34;
@@ -33,6 +35,11 @@
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-.RewardsModal-claim:hover {
+.RewardsModal-claim:hover:not(:disabled) {
   background-color: #1b1e24;
+}
+
+.RewardsModal-claim:disabled {
+  visibility: hidden;
+  opacity: 0;
 }

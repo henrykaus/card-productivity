@@ -1,6 +1,5 @@
 .CardPack {
   height: 300px;
-  width: 200px;
   border-radius: 15px;
   transition: all ease-in-out 200ms;
   position: relative;

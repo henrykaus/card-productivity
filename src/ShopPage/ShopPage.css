@@ -1,6 +1,13 @@
 .ShopPage {
   display: flex;
+  max-width: 100vw;
+}
+
+.ShopPage-slider {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3em;
+  gap: 3.5em;
+  overflow-x: auto;
+  padding: 0 4.25em;
+  height: 100vh;
 }

@@ -22,15 +22,18 @@ const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
   return (
     <>
       <article className="ShopPage">
-        {PACKS.map((pack, index) => (
-          <CardPack key={index} pack={pack} onPurchase={handlePurchase}/>
-        ))}
+        <div className="ShopPage-slider">
+          {PACKS.map((pack, index) => (
+            <CardPack key={index} pack={pack} onPurchase={handlePurchase}/>
+          ))}
+        </div>
       </article>
-      <RewardsModal
-        rewards={rewards}
-        isOpen={rewardsModalIsOpen}
-        onClose={() => setRewardsModalIsOpen(false)}
-      />
+      {rewardsModalIsOpen && (
+        <RewardsModal
+          rewards={rewards}
+          onClose={() => setRewardsModalIsOpen(false)}
+        />
+      )}
     </>
   );
 }

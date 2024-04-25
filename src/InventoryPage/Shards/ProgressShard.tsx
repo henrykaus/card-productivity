@@ -14,6 +14,7 @@ const ProgressShard = (props: ProgressShardProps): ReactElement => {
     <Shard
       itemName={itemName}
       image={image}
+      className='ProgressShard'
       info={(
         <p className='ProgressShard-info'>
           <span className='ProgressShard-count'>{count}</span>

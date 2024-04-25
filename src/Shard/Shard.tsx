@@ -11,6 +11,8 @@ export interface ShardProps {
   color?: 'purple' | 'green';
   icon?: 'bolt' | 'gift';
   type?: string;
+  className?: string;
+  hasInfo?: boolean;
 }
 
 const Shard = (props: ShardProps): ReactElement => {
@@ -22,23 +24,27 @@ const Shard = (props: ShardProps): ReactElement => {
     color = "purple",
     icon = 'bolt',
     type = 'Shard',
+    hasInfo = true,
+    className
   } = props;
 
   const item = icon === 'bolt' ?
     faBolt : faGift;
 
   return (
-    <section className={`Shard ${colorVariantClasses[color]}`}>
+    <section className={`Shard ${colorVariantClasses[color]} ${className}`}>
       <button
         className='Shard-image-container'
         disabled={!onClick}
         onClick={onClick}
       >
         <img src={require(`../img/${image}`)} alt={itemName} height={300} width={200} className='Shard-image' />
-        <span className='Shard-info'>
-          {info}
-          <FontAwesomeIcon icon={item} className='Shard-icon'/>
-        </span>
+        {hasInfo && (
+          <span className='Shard-info'>
+            {info}
+            <FontAwesomeIcon icon={item} className='Shard-icon'/>
+          </span>
+        )}
       </button>
       <p className='Shard-text'>{itemName} {type}</p>
     </section>

@@ -1,3 +1,7 @@
+.CompleteShard:hover {
+  transform: scale(1.07);
+}
+
 .CompleteShard-info {
   margin: 0;
   line-height: 1em;

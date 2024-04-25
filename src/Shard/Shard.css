@@ -1,9 +1,5 @@
 .Shard {
-  transition: all ease-in-out 0.2s;
-}
-
-.Shard:hover {
-  transform: scale(1.07);
+  transition: transform ease-in-out 0.2s;
 }
 
 .Shard-image-container {
