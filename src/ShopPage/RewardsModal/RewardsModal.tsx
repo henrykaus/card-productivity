@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import './RewardsModal.css';
-import Shard from "./Shard";
+import Shard from "../../Shard/Shard";
 import {Item} from "../../items";
 
 interface RewardsModalProps {

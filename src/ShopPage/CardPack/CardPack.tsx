@@ -3,26 +3,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './CardPack.css';
 import {faCoins} from "@fortawesome/free-solid-svg-icons";
 import {GoldContext} from "../../Main/Main";
+import {Pack} from "../../packs";
 
 interface CardPackProps {
-  price: number;
-  onPurchase: (price: number) => void;
+  pack: Pack;
+  onPurchase: (pack: Pack) => void;
 }
 
 const CardPack = (props: CardPackProps): ReactElement => {
-  const {price, onPurchase} = props;
+  const {pack, onPurchase} = props;
 
   const gold = useContext(GoldContext);
 
   return (
     <button
       className='CardPack'
-      onClick={() => onPurchase(price)}
-      disabled={price > gold}
+      onClick={() => onPurchase(pack)}
+      disabled={pack.cost > gold}
     >
+      <img src={require(`../../img/${pack.image}`)} height={300} width={200} alt={`${pack.name} pack`} className='CardPack-image' />
       <p className="CardPack-cost">
         <FontAwesomeIcon icon={faCoins} className='CardPack-cost-icon' />
-        {price}
+        {pack.cost}
       </p>
     </button>
   );

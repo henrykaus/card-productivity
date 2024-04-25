@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import './CompleteShard.css';
-import Shard, {ShardProps} from "../../ShopPage/RewardsModal/Shard";
+import Shard, {ShardProps} from "../../Shard/Shard";
 
 interface CompleteShardProps extends ShardProps {
   numComplete: number;

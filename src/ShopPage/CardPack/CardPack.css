@@ -4,9 +4,13 @@
   border-radius: 15px;
   transition: all ease-in-out 200ms;
   position: relative;
-  background-image: url("../../img/card2.png");
-  background-size: cover;
+  padding: 0;
   box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.CardPack-image {
+  border-radius: 15px;
+  object-fit: cover;
 }
 
 .CardPack:disabled {

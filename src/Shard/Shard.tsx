@@ -34,7 +34,7 @@ const Shard = (props: ShardProps): ReactElement => {
         disabled={!onClick}
         onClick={onClick}
       >
-        <img src={require(`../../img/${image}`)} alt={itemName} height={300} width={200} className='Shard-image' />
+        <img src={require(`../img/${image}`)} alt={itemName} height={300} width={200} className='Shard-image' />
         <span className='Shard-info'>
           {info}
           <FontAwesomeIcon icon={item} className='Shard-icon'/>

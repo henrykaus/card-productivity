@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import './ProgressShard.css';
-import Shard, {ShardProps} from "../../ShopPage/RewardsModal/Shard";
+import Shard, {ShardProps} from "../../Shard/Shard";
 
 interface ProgressShardProps extends ShardProps {
   numShards: number;
