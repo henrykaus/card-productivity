@@ -28,6 +28,10 @@ input::-webkit-inner-spin-button {
   appearance: none;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
