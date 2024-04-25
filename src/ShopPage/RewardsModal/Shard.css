@@ -20,12 +20,13 @@
   border-radius: 15px;
   border: solid 5px #27282D;
   object-fit: cover;
-  box-shadow: 1px 5px 10px 5px #1b1e24;
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 .Shard-text {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  margin: 0.5em 0 0 0;
 }
 
 .Shard-info {

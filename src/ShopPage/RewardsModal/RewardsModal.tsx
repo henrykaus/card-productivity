@@ -1,5 +1,4 @@
 import React, {ReactElement} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './RewardsModal.css';
 import Shard from "./Shard";
 import {Item} from "../../items";
@@ -24,7 +23,12 @@ const RewardsModal = (props: RewardsModalProps): ReactElement => {
           />
         )}
       </ul>
-      <button className="RewardsModal-claim" onClick={onClose}>Claim Rewards</button>
+      <button
+        className="RewardsModal-claim"
+        onClick={onClose}
+      >
+        Claim Rewards
+      </button>
     </main>
   ) : <></>;
 }

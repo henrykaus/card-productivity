@@ -8,8 +8,9 @@ export interface ShardProps {
   image: string;
   onClick?: () => void;
   info?: ReactElement;
-  color?: 'purple' | 'green'
-  icon?: 'bolt' | 'gift'
+  color?: 'purple' | 'green';
+  icon?: 'bolt' | 'gift';
+  type?: string;
 }
 
 const Shard = (props: ShardProps): ReactElement => {
@@ -19,7 +20,8 @@ const Shard = (props: ShardProps): ReactElement => {
     onClick,
     info,
     color = "purple",
-    icon = 'bolt'
+    icon = 'bolt',
+    type = 'Shard',
   } = props;
 
   const item = icon === 'bolt' ?
@@ -38,7 +40,7 @@ const Shard = (props: ShardProps): ReactElement => {
           <FontAwesomeIcon icon={item} className='Shard-icon'/>
         </span>
       </button>
-      <p className='Shard-text'>{itemName} Shard</p>
+      <p className='Shard-text'>{itemName} {type}</p>
     </section>
   );
 }

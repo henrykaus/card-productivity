@@ -17,6 +17,7 @@ const CompleteShard = (props: CompleteShardProps): ReactElement => {
       image={image}
       color='green'
       icon='gift'
+      type='Reward'
       info={(
         <p className='CompleteShard-info'>
           x

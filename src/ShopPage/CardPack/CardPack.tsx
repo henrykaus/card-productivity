@@ -21,7 +21,7 @@ const CardPack = (props: CardPackProps): ReactElement => {
       disabled={price > gold}
     >
       <p className="CardPack-cost">
-        <FontAwesomeIcon icon={faCoins} />
+        <FontAwesomeIcon icon={faCoins} className='CardPack-cost-icon' />
         {price}
       </p>
     </button>

@@ -1,14 +1,12 @@
 .CardPack {
   height: 300px;
   width: 200px;
-  background-color: white;
   border-radius: 15px;
-  border: solid 2px grey;
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 200ms;
   position: relative;
   background-image: url("../../img/card2.png");
   background-size: cover;
-  box-shadow: 1px 5px 10px 5px #1b1e24;
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 .CardPack:disabled {
@@ -28,23 +26,32 @@
 
 @keyframes card-pack-hover {
   0%   {transform: scale(1) rotate(0);}
-  25%  {transform: scale(1.2) rotate(1deg); box-shadow: 1px 5px 15px 10px #1b1e24;}
-  100% {transform: scale(1.1) rotate(-3deg); box-shadow: 1px 5px 12px 7px #1b1e24;}
+  25%  {transform: scale(1.2) rotate(1deg); box-shadow: 1px 5px 15px 10px rgba(0, 0, 0, 0.5);}
+  100% {transform: scale(1.1) rotate(-3deg); box-shadow: 1px 5px 12px 7px rgba(0, 0, 0, 0.5);}
 }
 
 @keyframes card-pack-hover-from {
-  from {transform: scale(1.1) rotate(-3deg); box-shadow: 1px 5px 12px 7px #1b1e24;}
-  to {transform: scale(1) rotate(0); box-shadow: 1px 5px 10px 5px #1b1e24;}
+  from {transform: scale(1.1) rotate(-3deg); box-shadow: 1px 5px 12px 7px rgba(0, 0, 0, 0.5);}
+  to {transform: scale(1) rotate(0); box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.5);}
 }
 
 .CardPack-cost {
   display: flex;
-  gap: 0.2em;
+  gap: 0.3em;
+  border: 2px solid #b08926;
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+  background-color: #f0c868;
   position: absolute;
   bottom: 0.5em;
   right: 0.5em;
-  color: #F0C868;
-  font-size: 1.3em;
+  color: #795e1a;
+  font-size: 1.2em;
   font-weight: 800;
   margin: 0;
+}
+
+.CardPack-cost-icon {
+  font-size: 0.9em;
+  color: #b08926;
 }

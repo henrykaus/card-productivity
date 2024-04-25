@@ -29,7 +29,7 @@
 }
 
 .NavBar-list button:hover,
-button.NavBar-active{
+button.NavBar-active {
   color: white;
   transition: all 100ms ease-in;
 }
@@ -40,11 +40,15 @@ button.NavBar-active {
 
 @media (max-width: 615px) {
   .NavBar {
-    bottom: 0;
+    bottom: 1em;
     top: unset;
-    right: 1.5em;
+    right: 1em;
 
-    border-radius: 16px 16px 0 0;
+    border-radius: 16px;
+  }
+
+  .NavBar-list button {
+    font-size: 1.25em;
   }
 
   .NavBar-list {
