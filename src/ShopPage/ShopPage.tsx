@@ -8,15 +8,16 @@ import {pickRewards, updateInventory} from "./shopPageUtils";
 import {Pack, PACKS} from "../packs";
 
 const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
-  const [rewardsModalIsOpen, setRewardsModalIsOpen] = useState(false);
+  const [purchasedPack, setPurchasedPack] = useState<Pack | null>(null);
   const [rewards, setRewards] = useState<Item[]>([]);
 
   const handlePurchase = (pack: Pack) => {
     updateGoldValue(-pack.cost);
     const rewards = pickRewards(3, pack.items);
+
     updateInventory(rewards);
     setRewards(rewards);
-    setRewardsModalIsOpen(true);
+    setPurchasedPack(pack);
   }
 
   return (
@@ -24,14 +25,19 @@ const ShopPage = ({updateGoldValue}: PageProps): ReactElement => {
       <article className="ShopPage">
         <div className="ShopPage-slider">
           {PACKS.map((pack, index) => (
-            <CardPack key={index} pack={pack} onPurchase={handlePurchase}/>
+            <CardPack
+              key={index}
+              pack={pack}
+              onPurchase={handlePurchase}
+            />
           ))}
         </div>
       </article>
-      {rewardsModalIsOpen && (
+      {purchasedPack && (
         <RewardsModal
           rewards={rewards}
-          onClose={() => setRewardsModalIsOpen(false)}
+          purchasedPack={purchasedPack}
+          onClose={() => setPurchasedPack(null)}
         />
       )}
     </>

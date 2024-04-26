@@ -5,11 +5,12 @@ import Shard from "../../Shard/Shard";
 interface FlippableShardProps {
   itemName: string;
   image: string;
+  cardBackImage: string;
   onFlip: () => void;
 }
 
 const FlippableShard = (props: FlippableShardProps): ReactElement => {
-  const {itemName, image, onFlip} = props;
+  const {itemName, image, cardBackImage, onFlip} = props;
 
   const [flipped, setFlipped] = useState(false);
 
@@ -29,7 +30,7 @@ const FlippableShard = (props: FlippableShardProps): ReactElement => {
       <Shard
         itemName=''
         type=''
-        image='bg2.png'
+        image={cardBackImage}
         hasInfo={false}
         className={`FlippableShard-back ${flipped ? 'FlippableShard-back--flipped' : ''}`}
         onClick={handleFlip}

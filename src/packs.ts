@@ -2,6 +2,7 @@ export interface Pack {
   name: string;
   cost: number;
   image: string;
+  cardBackImage: string;
   items: string[];
 }
 
@@ -9,22 +10,24 @@ export const PACKS: Pack[] = [
   {
     name: 'Basic',
     cost: 60,
-    image: 'card2.png',
+    image: 'pack2.png',
+    cardBackImage: 'card-back1.jpg',
     items: [
       'AirPods',
       'Pillow',
-      'Sparkling Water'
-    ]
+      'Sparkling Water',
+    ],
   },
   {
     name: 'Special',
     cost: 100,
-    image: 'card1.png',
+    image: 'pack1.png',
+    cardBackImage: 'card-back2.jpg',
     items: [
       'Shirt',
       'Computer',
       'Headphones',
-      'Sparkling Water'
-    ]
+      'Sparkling Water',
+    ],
   }
 ]

@@ -2,14 +2,16 @@ import React, {ReactElement, useState} from 'react';
 import './RewardsModal.css';
 import {Item} from "../../items";
 import FlippableShard from "./FlippableShard";
+import {Pack} from "../../packs";
 
 interface RewardsModalProps {
   onClose: () => void;
   rewards: Item[];
+  purchasedPack: Pack;
 }
 
 const RewardsModal = (props: RewardsModalProps): ReactElement => {
-  const {onClose, rewards} = props;
+  const {onClose, rewards, purchasedPack} = props;
 
   const [cardsFlipped, setCardsFlipped] = useState(rewards.map(() => false));
   const [allCardsFlipped, setAllCardsFlipped] = useState(false);
@@ -35,6 +37,7 @@ const RewardsModal = (props: RewardsModalProps): ReactElement => {
             key={index}
             itemName={reward.name}
             image={reward.image}
+            cardBackImage={purchasedPack.cardBackImage}
             onFlip={() => handleFlip(index)}
           />
         )}
