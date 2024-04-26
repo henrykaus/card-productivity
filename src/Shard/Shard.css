@@ -13,7 +13,7 @@
 }
 
 .Shard-image {
-  transition: all ease-in-out 0.2s;
+  transition: all ease-out 0.65s;
   border-radius: 15px;
   border: solid 5px #27282D;
   object-fit: cover;
@@ -78,7 +78,7 @@
 .Shard--purple.Shard--glow:hover .Shard-image {
   box-shadow: 0 0 50px 13px rgba(106, 73, 147, 0.9);
   animation: purple-glow 4s infinite;
-  animation-delay: 0.2s;
+  animation-delay: 0.65s;
 }
 
 .Shard--green .Shard-info {
@@ -91,7 +91,7 @@
 .Shard--green.Shard--glow:hover .Shard-image {
   box-shadow: 0 0 50px 13px rgba(97, 187, 94, 0.9);
   animation: green-glow 4s infinite;
-  animation-delay: 0.2s;
+  animation-delay: 0.65s;
 }
 
 @keyframes purple-glow {
