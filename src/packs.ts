@@ -10,7 +10,7 @@ export const PACKS: Pack[] = [
   {
     name: 'Basic',
     cost: 60,
-    image: 'pack2.png',
+    image: 'pack2.jpg',
     cardBackImage: 'card-back1.jpg',
     items: [
       'AirPods',
@@ -21,7 +21,7 @@ export const PACKS: Pack[] = [
   {
     name: 'Special',
     cost: 100,
-    image: 'pack1.png',
+    image: 'pack1.jpg',
     cardBackImage: 'card-back2.jpg',
     items: [
       'Shirt',

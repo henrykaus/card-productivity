@@ -10,37 +10,37 @@ export const ITEMS: Item[] = [
     name: 'AirPods',
     numShards: 15,
     weight: 0.1,
-    image: 'airpods.png'
+    image: 'airpods.jpg'
   },
   {
     name: 'Pillow',
     numShards: 4,
     weight: 0.35,
-    image: 'pillow.png'
+    image: 'pillow.jpg'
   },
   {
     name: 'Shirt',
     numShards: 5,
     weight: 0.45,
-    image: 'shirt.png'
+    image: 'shirt.jpg'
   },
   {
     name: 'Computer',
     numShards: 30,
     weight: 0.1,
-    image: 'computer.png'
+    image: 'computer.jpg'
   },
   {
     name: 'Headphones',
     numShards: 15,
     weight: 0.1,
-    image: 'headphones.png'
+    image: 'headphones.jpg'
    },
    {
     name: 'Sparkling Water',
     numShards: 1,
     weight: .2,
-    image: 'water.png'
+    image: 'water.jpg'
    }
 ]
 
