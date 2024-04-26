@@ -1,5 +1,5 @@
 .Shard {
-  transition: transform ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .Shard-image-container {
@@ -13,6 +13,7 @@
 }
 
 .Shard-image {
+  transition: all ease-in-out 0.2s;
   border-radius: 15px;
   border: solid 5px #27282D;
   object-fit: cover;
@@ -74,10 +75,39 @@
   filter: drop-shadow(0 0 3px #6B577D);
 }
 
+.Shard--purple.Shard--glow:hover .Shard-image {
+  box-shadow: 0 0 50px 13px rgba(106, 73, 147, 0.9);
+  animation: purple-glow 4s infinite;
+  animation-delay: 0.2s;
+}
+
 .Shard--green .Shard-info {
   color: #79ab77;
 }
 .Shard--green .Shard-icon {
   filter: drop-shadow(0 0 3px #577d58);
+}
+
+.Shard--green.Shard--glow:hover .Shard-image {
+  box-shadow: 0 0 50px 13px rgba(97, 187, 94, 0.9);
+  animation: green-glow 4s infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes purple-glow {
+  0%   { box-shadow: 0 0 50px 13px rgba(106, 73, 147, 0.9); }
+  15%  { box-shadow: -3px -1px 55px 11px rgba(106, 73, 147, 1.0); }
+  65%  { box-shadow: 2px 0 45px 15px rgba(106, 73, 147, 0.6); }
+  75%  { box-shadow: 3px 2px 40px 11px rgba(106, 73, 147, 0.7); }
+  100% { box-shadow: 0 0 50px 13px rgba(106, 73, 147, 0.9); }
+}
+
+
+@keyframes green-glow {
+  0%   { box-shadow: 0 0 50px 13px rgba(97, 187, 94, 0.9); }
+  15%  { box-shadow: -3px -1px 55px 11px rgba(97, 187, 94, 1.0); }
+  65%  { box-shadow: 2px 0 45px 15px rgba(97, 187, 94, 0.6); }
+  75%  { box-shadow: 3px 2px 40px 11px rgba(97, 187, 94, 0.7); }
+  100% { box-shadow: 0 0 50px 13px rgba(97, 187, 94, 0.9); }
 }
 

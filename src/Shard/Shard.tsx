@@ -9,6 +9,7 @@ export interface ShardProps {
   onClick?: () => void;
   info?: ReactElement;
   color?: 'purple' | 'green';
+  glow?: boolean;
   icon?: 'bolt' | 'gift';
   type?: string;
   className?: string;
@@ -22,6 +23,7 @@ const Shard = (props: ShardProps): ReactElement => {
     onClick,
     info,
     color = "purple",
+    glow = false,
     icon = 'bolt',
     type = 'Shard',
     hasInfo = true,
@@ -32,7 +34,7 @@ const Shard = (props: ShardProps): ReactElement => {
     faBolt : faGift;
 
   return (
-    <section className={`Shard ${colorVariantClasses[color]} ${className}`}>
+    <section className={`Shard ${colorVariantClasses[color]} ${glow ? 'Shard--glow' : ''} ${className}`}>
       <button
         className='Shard-image-container'
         disabled={!onClick}

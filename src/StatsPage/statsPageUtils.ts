@@ -25,6 +25,7 @@ export const getStats = () => {
     return [];
   } else {
     const storedTimeStats = JSON.parse(storedTimeStatsString);
+    console.log(storedTimeStats);
     const timeStats = {
       lastDay: storedTimeStats[todaysDate],
       lastWeek: 0,
