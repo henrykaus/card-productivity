@@ -1,7 +1,7 @@
 .GoldButton {
   display: flex;
   gap: 0.5em;
-  position: absolute;
+  position: fixed;
   bottom: 1em;
   left: 1em;
   background-color: #F0C868;
@@ -16,7 +16,6 @@
 .GoldButton:hover {
   color: #b08926;
   border-color: #b08926;
-  /*background-color: #f0c868;*/
 }
 
 @media (max-width: 615px) {

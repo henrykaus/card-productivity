@@ -1,16 +1,51 @@
 .StatsPage {
-  height: 100%;
+  height: calc(100% - 14em);
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-content: center;
+  padding: 7em;
+  gap: 2em;
 }
 
 .StatsPage-graph-container {
-  height: 70%;
-  width: 60%;
+  height: 100%;
+  grid-row: span 2;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 2em;
-  color: #ffc07b;
+  backdrop-filter: blur(6px);
+}
+
+.StatsPage-stat-container {
+  font-weight: 600;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  padding: 0 1em;
+}
+
+.StatsPage-stat-number {
+  font-weight: 800;
+  font-size: 2.1em;
+  text-shadow: 4px 4px #ffc07b;
+}
+
+@media (max-width: 1000px) {
+  .StatsPage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
+
+  .StatsPage-graph-container {
+    grid-row: unset;
+    grid-column: span 2;
+  }
 }

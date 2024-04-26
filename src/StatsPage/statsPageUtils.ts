@@ -11,7 +11,11 @@ const getDateFromAgo = (days: number) => {
 const convertMinutesToClock = (time: number) => {
   const minutes = time % 60;
   const hours = (time - minutes) / 60;
-  return `${hours.toString()}:${minutes.toString().padStart(2, '0')}`;
+  if (!minutes) {
+    return `${hours.toString()}hr`;
+  } else {
+    return `${hours.toString()}hr ${minutes.toString().padStart(2, '0')}`;
+  }
 }
 
 export const getStats = () => {
@@ -27,7 +31,7 @@ export const getStats = () => {
     const storedTimeStats = JSON.parse(storedTimeStatsString);
     console.log(storedTimeStats);
     const timeStats = {
-      lastDay: storedTimeStats[todaysDate],
+      today: storedTimeStats[todaysDate] ? storedTimeStats[todaysDate] : 0,
       lastWeek: 0,
       lastMonth: 0,
       lastYear: 0,
@@ -50,19 +54,9 @@ export const getStats = () => {
 
     return [
       {
-        name: 'Last Day',
-        time: timeStats.lastDay,
-        readableTime: convertMinutesToClock(timeStats.lastDay),
-      },
-      {
-        name: 'Last Week',
-        time: timeStats.lastWeek,
-        readableTime: convertMinutesToClock(timeStats.lastWeek),
-      },
-      {
-        name: 'Last Month',
-        time: timeStats.lastMonth,
-        readableTime: convertMinutesToClock(timeStats.lastMonth),
+        name: 'All Time',
+        time: timeStats.allTime,
+        readableTime: convertMinutesToClock(timeStats.allTime),
       },
       {
         name: 'Last Year',
@@ -70,9 +64,19 @@ export const getStats = () => {
         readableTime: convertMinutesToClock(timeStats.lastYear),
       },
       {
-        name: 'All Time',
-        time: timeStats.allTime,
-        readableTime: convertMinutesToClock(timeStats.allTime),
+        name: 'Last Month',
+        time: timeStats.lastMonth,
+        readableTime: convertMinutesToClock(timeStats.lastMonth),
+      },
+      {
+        name: 'Last Week',
+        time: timeStats.lastWeek,
+        readableTime: convertMinutesToClock(timeStats.lastWeek),
+      },
+      {
+        name: 'Today',
+        time: timeStats.today,
+        readableTime: convertMinutesToClock(timeStats.today),
       },
     ]
   }
