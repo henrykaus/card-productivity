@@ -14,8 +14,8 @@ const StatsPage = (): ReactElement => {
     <article className="StatsPage">
       <section className='StatsPage-graph-container'>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart width={150} height={40} data={stats} margin={{ top: 30 }} >
-            <Bar dataKey="time">
+          <BarChart width={150} height={40} data={stats} margin={{top: 30}} >
+            <Bar dataKey="time" radius={[15, 15, 0, 0]}>
               <LabelList dataKey="readableTime" position="top" />
               {stats && stats.map(() => (
                 <Cell fill='#ffc07b' />
