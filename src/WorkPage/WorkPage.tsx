@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './WorkPage.css';
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import TimeInput, {emptyTime, Time} from "./TimeInput/TimeInput";
+import {storeTime} from "./workPageUtils";
 
 export interface PageProps {
   updateGoldValue: (gold: number) => void;
@@ -58,14 +59,15 @@ const WorkPage = (props: PageProps): ReactElement => {
     const hours = Number(time.hours);
     const minutes = Number(time.minutes);
 
-    let goldToAdd = 0;
+    let timeInMinutes = 0;
     if (!isNaN(hours)) {
-      goldToAdd += hours * 60;
+      timeInMinutes += hours * 60;
     }
     if (!isNaN(minutes)) {
-      goldToAdd += minutes;
+      timeInMinutes += minutes;
     }
-    updateGoldValue(goldToAdd);
+    storeTime(timeInMinutes);
+    updateGoldValue(timeInMinutes);
     setTime(emptyTime);
   }
 

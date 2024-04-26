@@ -6,6 +6,7 @@ import WorkPage from "../WorkPage/WorkPage";
 import NavBar, {Page} from "../NavBar/NavBar";
 import ShopPage from "../ShopPage/ShopPage";
 import InventoryPage from "../InventoryPage/InventoryPage";
+import StatsPage from "../StatsPage/StatsPage";
 
 export const GoldContext = createContext(0);
 
@@ -40,6 +41,9 @@ const Main = (): ReactElement => {
           )}
           {page === Page.Inventory && (
             <InventoryPage />
+          )}
+          {page === Page.Stats && (
+            <StatsPage />
           )}
         </main>
         <NavBar activePage={page} setPage={setPage}/>
