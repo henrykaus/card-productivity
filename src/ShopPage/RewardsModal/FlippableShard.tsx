@@ -1,6 +1,7 @@
 import React, {ReactElement, useState} from 'react';
 import './FlippableShard.css';
 import Shard from "../../Shard/Shard";
+import classNames from "classnames";
 
 interface FlippableShardProps {
   itemName: string;
@@ -24,16 +25,17 @@ const FlippableShard = (props: FlippableShardProps): ReactElement => {
       <Shard
         itemName={itemName}
         image={image}
-        className={`FlippableShard-front ${flipped ? 'FlippableShard-front--flipped' : ''}`}
+        className={classNames('FlippableShard-front', {'FlippableShard-front--flipped': flipped})}
         onClick={handleFlip}
+        ariaLabel='Flip card to back'
       />
       <Shard
         itemName=''
-        type=''
         image={cardBackImage}
         hasInfo={false}
-        className={`FlippableShard-back ${flipped ? 'FlippableShard-back--flipped' : ''}`}
+        className={classNames('FlippableShard-back', {'FlippableShard-back--flipped': flipped})}
         onClick={handleFlip}
+        ariaLabel='Flip card to front'
       />
     </div>
   );

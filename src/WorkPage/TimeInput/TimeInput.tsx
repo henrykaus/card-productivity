@@ -17,6 +17,7 @@ interface TimeInputProps {
 }
 
 const TimeInput = ({time, onChange}: TimeInputProps): ReactElement => {
+  const hourRef = useRef<HTMLInputElement>(null);
   const minuteRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -25,13 +26,21 @@ const TimeInput = ({time, onChange}: TimeInputProps): ReactElement => {
     }
   }, [time.hours])
 
+  const handleBackspacePress = (key: string, minuteValue: string) => {
+    if (key === 'Backspace' && minuteValue.length === 0) {
+      onChange("hours", time.hours.slice(0, time.hours.length));
+      hourRef.current?.focus();
+    }
+  };
+
   return (
     <span className="TimeInput">
       <input
+        ref={hourRef}
         value={time.hours}
         placeholder="HH"
+        aria-label="Hours"
         type="number"
-        name="hours"
         className="TimeInput-input"
         onChange={(event) =>
           onChange("hours", event.target.value)
@@ -42,11 +51,14 @@ const TimeInput = ({time, onChange}: TimeInputProps): ReactElement => {
         ref={minuteRef}
         value={time.minutes}
         placeholder="MM"
+        aria-label="Minutes"
         type="number"
-        name="minute"
         className="TimeInput-input"
         onChange={(event) =>
           onChange("minutes", event.target.value)
+        }
+        onKeyDown={(event) =>
+          handleBackspacePress(event.key, time.minutes)
         }
       />
     </span>

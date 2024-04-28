@@ -10,7 +10,7 @@ interface GoldButtonProps {
 
 const GoldButton = ({children, onClick}: GoldButtonProps): ReactElement => {
   return (
-    <button className="GoldButton" onClick={onClick}>
+    <button className="GoldButton" onClick={onClick} aria-label={`Navigate to shop with ${children} gold`}>
       <FontAwesomeIcon icon={faCoins} />
       {children}
     </button>

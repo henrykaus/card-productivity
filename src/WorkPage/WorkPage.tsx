@@ -39,7 +39,7 @@ const WorkPage = (props: PageProps): ReactElement => {
         if (timeNumber > 59) {
           setTime({
             ...time,
-            minutes: '59',
+            minutes: "59",
           })
         }
         else if (timeNumber >= 0) {
@@ -72,18 +72,21 @@ const WorkPage = (props: PageProps): ReactElement => {
   }
 
   return (
-    <form className="WorkPage-form" onSubmit={(event) =>
-      changeGoldCount(event)
-    }>
+    <form
+      className="WorkPage-form"
+      onSubmit={(event) =>
+        changeGoldCount(event)
+      }
+    >
       <p className="WorkPage-header">
-       I worked
+        I worked
         <TimeInput time={time} onChange={validateAndSetTime} />
       </p>
       <button
         className="WorkPage-go-button"
         disabled={!(Number(time.hours) > 0) && !(Number(time.minutes) > 0)}
         type="submit"
-        aria-label='Add time'
+        aria-label="Add time"
       >
         <FontAwesomeIcon icon={faArrowRight}/>
       </button>

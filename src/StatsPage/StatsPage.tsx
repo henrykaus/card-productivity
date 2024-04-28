@@ -25,16 +25,16 @@ const StatsPage = (): ReactElement => {
         </ResponsiveContainer>
       </section>
       <section className='StatsPage-stat-container'>
-        Today
-        <span className='StatsPage-stat-number'>
+        <h2 className='StatsPage-stat-title'>Today</h2>
+        <p className='StatsPage-stat-number'>
           {stats && stats.find((item: any) => item.name === 'Today')?.readableTime}
-        </span>
+        </p>
       </section>
       <section className='StatsPage-stat-container'>
-        All Time
-        <span className='StatsPage-stat-number'>
+        <h2 className='StatsPage-stat-title'>All Time</h2>
+        <p className='StatsPage-stat-number'>
           {stats && stats.find((item: any) => item.name === 'All Time')?.readableTime}
-        </span>
+        </p>
       </section>
     </article>
   );

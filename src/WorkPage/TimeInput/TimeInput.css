@@ -7,11 +7,14 @@
   padding: 10px;
   background-color: #272727;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #E0E0E0;
   border: none;
   border-radius: 7px;
   font-size: 1em;
-  outline: none;
   width: 1.2em;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.TimeInput-input:focus {
+  outline: 2px solid #E0E0E0;
 }

@@ -3,6 +3,7 @@ import './NavBar.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBriefcase, faChartSimple, faStore} from "@fortawesome/free-solid-svg-icons";
 import {faClock} from "@fortawesome/free-regular-svg-icons";
+import classNames from "classnames";
 
 export enum Page {
   Work,
@@ -23,7 +24,7 @@ const NavBar = ({activePage, setPage}: NavBarProps): ReactElement => {
         <li>
           <button
             onClick={() => setPage(Page.Work)}
-            className={`${activePage === Page.Work && 'NavBar-active'}`}
+            className={classNames({'NavBar-active': activePage === Page.Work})}
             aria-label='Work Page'
           >
             <FontAwesomeIcon icon={faClock} />
@@ -32,7 +33,7 @@ const NavBar = ({activePage, setPage}: NavBarProps): ReactElement => {
         <li>
           <button
             onClick={() => setPage(Page.Shop)}
-            className={`${activePage === Page.Shop && 'NavBar-active'}`}
+            className={classNames({'NavBar-active': activePage === Page.Shop})}
             aria-label='Shop Page'
           >
             <FontAwesomeIcon icon={faStore} />
@@ -41,7 +42,7 @@ const NavBar = ({activePage, setPage}: NavBarProps): ReactElement => {
         <li>
           <button
             onClick={() => setPage(Page.Inventory)}
-            className={`${activePage === Page.Inventory && 'NavBar-active'}`}
+            className={classNames({'NavBar-active': activePage === Page.Inventory})}
             aria-label='Inventory Page'
           >
             <FontAwesomeIcon icon={faBriefcase} />
@@ -50,7 +51,7 @@ const NavBar = ({activePage, setPage}: NavBarProps): ReactElement => {
         <li>
           <button
             onClick={() => setPage(Page.Stats)}
-            className={`${activePage === Page.Stats && 'NavBar-active'}`}
+            className={classNames({'NavBar-active': activePage === Page.Stats})}
             aria-label='Statistics Page'
           >
             <FontAwesomeIcon icon={faChartSimple} />

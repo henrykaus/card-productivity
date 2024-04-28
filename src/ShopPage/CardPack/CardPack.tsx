@@ -20,8 +20,15 @@ const CardPack = (props: CardPackProps): ReactElement => {
       className='CardPack'
       onClick={() => onPurchase(pack)}
       disabled={pack.cost > gold}
+      aria-label={`Purchase and open ${pack.name} pack`}
     >
-      <img src={require(`../../img/${pack.image}`)} height={300} width={200} alt={`${pack.name} pack`} className='CardPack-image' />
+      <img
+        src={require(`../../img/${pack.image}`)}
+        height={300}
+        width={200}
+        alt={`${pack.name} pack`}
+        className='CardPack-image'
+      />
       <p className="CardPack-cost">
         <FontAwesomeIcon icon={faCoins} className='CardPack-cost-icon' />
         {pack.cost}
