@@ -46,7 +46,7 @@ const Main = (): ReactElement => {
             <StatsPage />
           )}
         </main>
-        <NavBar activePage={page} setPage={setPage}/>
+        <NavBar activePage={page} setPage={setPage} />
         <GoldButton onClick={() => setPage(Page.Shop)}>
           {goldCount}
         </GoldButton>

@@ -14,7 +14,11 @@
   gap: 0.5em;
 }
 
-.NavBar-list button {
+.NavBar-list li {
+  position: relative;
+}
+
+.NavBar-list-button {
   font-size: 1.5em;
   height: 2em;
   width: 2em;
@@ -29,8 +33,10 @@
 }
 
 .NavBar-list button:hover,
+.NavBar-list label:hover,
 button.NavBar-active {
   color: white;
+  cursor: pointer;
   transition: all 100ms ease-in;
 }
 button.NavBar-active {
