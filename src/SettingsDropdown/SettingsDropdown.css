@@ -43,3 +43,10 @@
 .SettingsDropdown > li:last-of-type .SettingsDropdown-button {
   padding: 0.5em 0.75em 0.75em 0.75em;
 }
+
+@media (max-width: 615px) {
+  .SettingsDropdown {
+    right: 0;
+    top: -6.5em;
+  }
+}
