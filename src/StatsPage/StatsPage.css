@@ -46,12 +46,44 @@
 
 @media (max-width: 1000px) {
   .StatsPage {
+    gap: 1.25em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr;
+    height: calc(100% - 12em);
+    padding: 5em 5em 7em 5em;
   }
 
   .StatsPage-graph-container {
     grid-row: unset;
     grid-column: span 2;
   }
+
+  .StatsPage-stat-container {
+    padding: 0 0.75em;
+  }
+
+  .StatsPage-stat-number {
+    font-size: 1.8em;
+  }
 }
+
+@media (max-width: 615px) {
+  .StatsPage {
+    height: calc(100% - 20em);
+    padding: 2em 2em 6em 2em;
+  }
+
+  .StatsPage-stat-container {
+    padding: 0 0.5em;
+  }
+
+  .StatsPage-stat-title {
+    font-size: 0.8em;
+  }
+
+  .StatsPage-stat-number {
+    font-size: 1em;
+    text-shadow: 2px 2px #ffc07b;
+  }
+}
+

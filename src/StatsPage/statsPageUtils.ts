@@ -29,7 +29,6 @@ export const getStats = () => {
     return [];
   } else {
     const storedTimeStats = JSON.parse(storedTimeStatsString);
-    console.log(storedTimeStats);
     const timeStats = {
       today: storedTimeStats[todaysDate] ? storedTimeStats[todaysDate] : 0,
       lastWeek: 0,
@@ -80,4 +79,16 @@ export const getStats = () => {
       },
     ]
   }
+}
+
+export interface StatsPageSettings {
+  barGraphRadius: number;
+  labelListFontSize: number;
+  xAxisFontSize: number;
+}
+
+export const defaultStatsPageSettings: StatsPageSettings = {
+  barGraphRadius: 15,
+  labelListFontSize: 20,
+  xAxisFontSize: 20,
 }
