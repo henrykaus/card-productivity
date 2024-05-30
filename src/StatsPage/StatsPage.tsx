@@ -8,7 +8,7 @@ const StatsPage = (): ReactElement => {
   const [stats, setStats] = useState<any>(null);
   const [pageSettings, setPageSettings] = useState<StatsPageSettings>(defaultStatsPageSettings)
 
-  const isMobile = useMediaQuery('(max-width: 600px)');
+  const isMobile = useMediaQuery('(max-width: 615px)');
 
   useEffect(() => {
     setStats(getStats());
@@ -19,7 +19,8 @@ const StatsPage = (): ReactElement => {
       setPageSettings({
         barGraphRadius: 9,
         labelListFontSize: 13,
-        xAxisFontSize: 13,
+        xAxisFontSize: 10.5,
+        barGap: '11%',
       })
     } else {
       setPageSettings(defaultStatsPageSettings)
@@ -34,7 +35,7 @@ const StatsPage = (): ReactElement => {
             data={stats}
             margin={{top: 30, left: 10, right: 10, bottom: 30}}
             layout='horizontal'
-            barCategoryGap='15%'
+            barCategoryGap={pageSettings.barGap}
           >
             <Bar
               dataKey='time'
@@ -53,6 +54,7 @@ const StatsPage = (): ReactElement => {
             <XAxis
               dataKey='name'
               tick={{fill: 'white'}}
+              interval={0}
               fontSize={pageSettings.xAxisFontSize}
               fontWeight={700}
               axisLine={false}

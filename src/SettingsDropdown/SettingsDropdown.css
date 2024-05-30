@@ -46,7 +46,7 @@
 
 @media (max-width: 615px) {
   .SettingsDropdown {
-    right: 0;
+    left: -8.6em;
     top: -6.5em;
   }
 }

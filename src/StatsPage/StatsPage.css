@@ -69,7 +69,7 @@
 
 @media (max-width: 615px) {
   .StatsPage {
-    height: calc(100% - 20em);
+    height: calc(100% - 14em);
     padding: 2em 2em 6em 2em;
   }
 
@@ -82,7 +82,7 @@
   }
 
   .StatsPage-stat-number {
-    font-size: 1em;
+    font-size: 1.15em;
     text-shadow: 2px 2px #ffc07b;
   }
 }

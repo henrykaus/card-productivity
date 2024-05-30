@@ -85,10 +85,12 @@ export interface StatsPageSettings {
   barGraphRadius: number;
   labelListFontSize: number;
   xAxisFontSize: number;
+  barGap: string;
 }
 
 export const defaultStatsPageSettings: StatsPageSettings = {
   barGraphRadius: 15,
   labelListFontSize: 20,
   xAxisFontSize: 20,
+  barGap: '15%',
 }
